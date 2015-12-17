@@ -417,7 +417,7 @@ level1Enemy[n*2], level1Enemy[n*2+1], enemyWidth, enemyHeight))
     {
       hpValue-=20;
       //record the frameCount of the moment
-      level1Flame[n][0]=frameCount % 60/24;
+      level1Flame[n][0]=frameCount % (60/10);
       //flame position == enemy position;
       //flame activation
       level1Flame[n][2]=level1Enemy[n*2];
@@ -439,7 +439,7 @@ level1Enemy[n*2], level1Enemy[n*2+1], enemyWidth, enemyHeight))
       {
         shootPos[j][0]=-2*width;
         //record the frameCount of the moment
-        level1Flame[n][0]=frameCount % 60/24;
+        level1Flame[n][0]=frameCount % (60/10);
         //flame position == enemy position;
         //flame activation
         level1Flame[n][2]=level1Enemy[n*2];
@@ -454,7 +454,7 @@ level1Enemy[n*2], level1Enemy[n*2+1], enemyWidth, enemyHeight))
   if(level1Flame[n][2] != -2*width)
   {
     //flame shows only at certain frameCount
-    if (frameCount % 60/24 == level1Flame[n][0])
+    if (frameCount % (60/10) == level1Flame[n][0])
     {
       image (flame[level1Flame[n][1]], level1Flame[n][2], level1Flame[n][3]);
       level1Flame[n][1]+=1;
@@ -553,7 +553,7 @@ level2Enemy[n*2], level2Enemy[n*2+1], enemyWidth, enemyHeight))
     {
       hpValue-=20;
       //record the frameCount of the moment
-      level2Flame[n][0]=frameCount % 60/24;
+      level2Flame[n][0]=frameCount % (60/10);
       //flame position == enemy position;
       //flame activation
       level2Flame[n][2]=level2Enemy[n*2];
@@ -576,7 +576,7 @@ level2Enemy[n*2], level2Enemy[n*2+1], enemyWidth, enemyHeight))
         //set the contacted shoot to reload
         shootPos[j][0]=-2*width;
         //record the frameCount of the moment
-        level2Flame[n][0]=frameCount % 60/24;
+        level2Flame[n][0]=frameCount % (60/10);
         //flame position == enemy position;
         //flame activation
         level2Flame[n][2]=level2Enemy[n*2];
@@ -591,7 +591,7 @@ level2Enemy[n*2], level2Enemy[n*2+1], enemyWidth, enemyHeight))
     if(level2Flame[n][2] != -2*width)
     {
       //flame shows only at certain frameCount
-      if (frameCount % 60/24 == level2Flame[n][0])
+      if (frameCount % (60/10) == level2Flame[n][0])
         {
         image (flame[level2Flame[n][1]], level2Flame[n][2], level2Flame[n][3]);
         level2Flame[n][1]+=1;
@@ -705,7 +705,7 @@ level3Enemy[n*2], level3Enemy[n*2+1], enemyWidth, enemyHeight))
   {
     hpValue-=20;
     //record the frameCount of the moment
-    level3Flame[n][0]=frameCount % 60/24;
+    level3Flame[n][0]=frameCount % (60/10);
     //flame position == enemy position;
     //flame activation
     level3Flame[n][2]=level3Enemy[n*2];
@@ -728,7 +728,7 @@ level3Enemy[n*2], level3Enemy[n*2+1], enemyWidth, enemyHeight))
         //set the contacted shoot to reload
         shootPos[j][0]=-2*width;
         //record the frameCount of the moment
-        level3Flame[n][0]=frameCount % 60/24;
+        level3Flame[n][0]=frameCount % (60/10);
         //flame position == enemy position;
         //flame activation
         level3Flame[n][2]=level3Enemy[n*2];
@@ -742,7 +742,7 @@ level3Enemy[n*2], level3Enemy[n*2+1], enemyWidth, enemyHeight))
   if(level3Flame[n][2] != -2*width)
   {
     //flame shows only at certain frameCount
-    if (frameCount % 60/24 == level3Flame[n][0])
+    if (frameCount % (60/10) == level3Flame[n][0])
     {
       image (flame[level3Flame[n][1]], level3Flame[n][2], level3Flame[n][3]);
       level3Flame[n][1]+=1;
