@@ -340,7 +340,8 @@ image (endImg1, 0, 0);
 else{
 image (endImg2, 0, 0);
 }
-hpValue=100;
+hpValue=20;
+score=0;
 //println("gameLose");
 break;
 
@@ -453,10 +454,11 @@ level1Enemy[n*2], level1Enemy[n*2+1], enemyWidth, enemyHeight))
   //if flame is activated
   if(level1Flame[n][2] != -2*width)
   {
+    image (flame[level1Flame[n][1]], level1Flame[n][2], level1Flame[n][3]);
     //flame shows only at certain frameCount
     if (frameCount % (60/10) == level1Flame[n][0])
     {
-      image (flame[level1Flame[n][1]], level1Flame[n][2], level1Flame[n][3]);
+
       level1Flame[n][1]+=1;
       //flame ends
       if (level1Flame[n][1]==5)
@@ -590,10 +592,11 @@ level2Enemy[n*2], level2Enemy[n*2+1], enemyWidth, enemyHeight))
     //if flame is activated
     if(level2Flame[n][2] != -2*width)
     {
+      image (flame[level2Flame[n][1]], level2Flame[n][2], level2Flame[n][3]);
       //flame shows only at certain frameCount
       if (frameCount % (60/10) == level2Flame[n][0])
         {
-        image (flame[level2Flame[n][1]], level2Flame[n][2], level2Flame[n][3]);
+
         level2Flame[n][1]+=1;
         //flame ends
         if (level2Flame[n][1]==5)
@@ -741,10 +744,11 @@ level3Enemy[n*2], level3Enemy[n*2+1], enemyWidth, enemyHeight))
   //if flame is activated
   if(level3Flame[n][2] != -2*width)
   {
+    image (flame[level3Flame[n][1]], level3Flame[n][2], level3Flame[n][3]);
     //flame shows only at certain frameCount
     if (frameCount % (60/10) == level3Flame[n][0])
     {
-      image (flame[level3Flame[n][1]], level3Flame[n][2], level3Flame[n][3]);
+
       level3Flame[n][1]+=1;
       //flame ends
       if (level3Flame[n][1]==5)
